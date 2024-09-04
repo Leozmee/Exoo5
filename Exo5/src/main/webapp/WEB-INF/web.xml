@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <servlet>
+        <servlet-name>ConsultationServlet</servlet-name>
+        <servlet-class>org.example.exo5.servlets.ConsultationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ConsultationServlet</servlet-name>
+        <url-pattern>/consultations/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FicheDeSoinServlet</servlet-name>
+        <servlet-class>org.example.exo5.servlets.FicheDeSoinServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FicheDeSoinServlet</servlet-name>
+        <url-pattern>/fiches-de-soin/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PatientServlet</servlet-name>
+        <servlet-class>org.example.exo5.servlets.PatientServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PatientServlet</servlet-name>
+        <url-pattern>/patients/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PrescriptionServlet</servlet-name>
+        <servlet-class>org.example.exo5.servlets.PrescriptionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PrescriptionServlet</servlet-name>
+        <url-pattern>/prescriptions/*</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>AuthFilter</filter-name>
+        <filter-class>org.example.exo5.filters.AuthFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <url-pattern>/patients/*</url-pattern>
+    </filter-mapping>
+
+</web-app>
